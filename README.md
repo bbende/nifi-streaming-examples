@@ -55,7 +55,7 @@ Collection of examples integrating NiFi with stream process frameworks.
 * Import nifi-flink-examples/src/main/resources/templates/nifi-flink-log-example-core.xml into the the core instance (http://localhost:8080/nifi)
 
 * Start everything on the core instance (http://localhost:8080/nifi)
-![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-core.tiff?raw=true)
+![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-core.png?raw=true)
 
 * Run the Flink streaming job
 <pre><code>
@@ -65,4 +65,4 @@ Collection of examples integrating NiFi with stream process frameworks.
 </code></pre>
 
 * To start sending logs, starting everything on the edge instance (http://localhost:8080/nifi) EXCEPT the TailFile processor
-![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-edge.tiff?raw=true)
+![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-edge.png?raw=true)

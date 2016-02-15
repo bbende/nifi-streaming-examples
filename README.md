@@ -50,9 +50,9 @@ Collection of examples integrating NiFi with stream process frameworks.
     WARN
 </code></pre>
 
-* Import nifi-flink-examples/src/main/resources/templates/nifi-flink-log-example-edge.xml into the the edge instance (http://localhost:7080/nifi)
+* Import nifi-streaming-examples/templates/nifi-log-example-edge.xml into the the edge instance (http://localhost:7080/nifi)
 
-* Import nifi-flink-examples/src/main/resources/templates/nifi-flink-log-example-core.xml into the the core instance (http://localhost:8080/nifi)
+* Import nifi-streaming-examples/templates/nifi-log-example-core.xml into the the core instance (http://localhost:8080/nifi)
 
 * Start everything on the core instance (http://localhost:8080/nifi)
 ![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-core.png?raw=true)

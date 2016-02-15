@@ -11,6 +11,7 @@
 
     <modules>
         <module>nifi-flink-examples</module>
+        <module>nifi-apex-examples</module>
     </modules>
 
     <build>

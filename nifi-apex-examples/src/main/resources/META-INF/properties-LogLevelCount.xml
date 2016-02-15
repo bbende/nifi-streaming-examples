@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<configuration>
+    <!--
+    <property>
+      <name>dt.application.{appName}.operator.{opName}.prop.{propName}</name>
+      <value>some-default-value (if value is not specified, it is required from the user or custom config when launching)</value>
+    </property>
+    -->
+    <!-- The url of the nifi instance to communicate with -->
+    <property>
+        <name>nifi.url</name>
+        <value>http://localhost:8080/nifi</value>
+    </property>
+    <!-- The NiFi port that will provide the input to this stream (Output Port in NiFi) -->
+    <property>
+        <name>nifi.input.port</name>
+        <value>Logs for Analysis</value>
+    </property>
+    <!-- The number of data packets to retrieve per request from NiFi for the input to this stream -->
+    <property>
+        <name>nifi.input.request.batch</name>
+        <value>5</value>
+    </property>
+    <!-- The NiFi port that will receive the output of this stream (Input Port in NiFi)-->
+    <property>
+        <name>nifi.output.port</name>
+        <value>New Dictionary</value>
+    </property>
+    <!-- The attribute on the NiFiDataPackets containing the log level -->
+    <property>
+        <name>log.level.attribute</name>
+        <value>log.level</value>
+    </property>
+    <!-- The number of ERROR+WARN events per second that triggers a change in collection -->
+    <property>
+        <name>log.level.rate.threshold</name>
+        <value>2</value>
+    </property>
+    <!-- The size of the window to compute the rate of logs over -->
+    <property>
+        <name>window.size.millis</name>
+        <value>60000</value>
+    </property>
+    <!-- The number of application windows that equal one window (120 500ms windows is a 60 second window) -->
+    <property>
+        <name>application.window.count</name>
+        <value>120</value>
+    </property>
+
+</configuration>

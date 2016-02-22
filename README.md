@@ -34,9 +34,6 @@ Collection of examples integrating NiFi with stream process frameworks.
     http://localhost:7080/nifi/
     http://localhost:8080/nifi/
   </code></pre>
-
-## Flink - WindowLogLevelCount - Setup
-
 * Setup initial dictionary files
   <pre><code>
     mkdir nifi-edge/data
@@ -57,14 +54,15 @@ Collection of examples integrating NiFi with stream process frameworks.
 * Start everything on the core instance (http://localhost:8080/nifi)
 ![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-core.png?raw=true)
 
+* To start sending logs, starting everything on the edge instance (http://localhost:8080/nifi) EXCEPT the TailFile processor, the "Generate Test Logs" process group will send fake log messages
+![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-edge.png?raw=true)
+
+* To tail a real file, stop the "Generate Test Logs" process group, configure TailFile to point to your log file of choice, and start the TailFile processor
+
+## Flink - WindowLogLevelCount - Setup
 * Run the Flink streaming job
 <pre><code>
   cd nifi-flink-examples
   mvn clean package -PWindowLogLevelCount
   java -jar target/nifi-flink-examples-0.0.1-SNAPSHOT.jar
 </code></pre>
-
-* To start sending logs, starting everything on the edge instance (http://localhost:8080/nifi) EXCEPT the TailFile processor, the "Generate Test Logs" process group will send fake log messages
-![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-edge.png?raw=true)
-
-* To tail a real file, stop the "Generate Test Logs" process group, configure TailFile to point to your log file of choice, and start the TailFile processor

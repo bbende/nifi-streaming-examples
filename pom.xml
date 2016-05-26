@@ -9,10 +9,24 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
+    <properties>
+        <nifi.version>0.6.1</nifi.version>
+    </properties>
+
     <modules>
         <module>nifi-flink-examples</module>
         <module>nifi-apex-examples</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-site-to-site-client</artifactId>
+                <version>${nifi.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

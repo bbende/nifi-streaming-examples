@@ -7,10 +7,10 @@ import com.datatorrent.api.annotation.ApplicationAnnotation;
 import com.datatorrent.contrib.nifi.NiFiDataPacketBuilder;
 import com.datatorrent.contrib.nifi.NiFiSinglePortInputOperator;
 import com.datatorrent.contrib.nifi.NiFiSinglePortOutputOperator;
-import com.datatorrent.lib.util.WindowDataManager;
 import nifi.apex.examples.logs.data.DictionaryBuilder;
 import nifi.apex.examples.logs.data.LogLevels;
 import nifi.apex.examples.logs.operators.LogLevelWindowCount;
+import org.apache.apex.malhar.lib.wal.WindowDataManager;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.nifi.remote.client.SiteToSiteClient;
 

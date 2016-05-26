@@ -11,9 +11,8 @@
   <packaging>jar</packaging>
 
   <properties>
-    <nifi.version>0.4.1</nifi.version>
-    <malhar.version>3.4.0-incubating-SNAPSHOT</malhar.version>
-    <apex.version>3.4.0-incubating-SNAPSHOT</apex.version>
+    <malhar.version>3.4.0</malhar.version>
+    <apex.version>3.4.0</apex.version>
     <apex.apppackage.classpath>lib/*.jar</apex.apppackage.classpath>
   </properties>
 
@@ -236,7 +235,6 @@
     <dependency>
       <groupId>org.apache.nifi</groupId>
       <artifactId>nifi-site-to-site-client</artifactId>
-      <version>${nifi.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.apex</groupId>

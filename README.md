@@ -60,9 +60,16 @@ Collection of examples integrating NiFi with stream process frameworks.
 * To tail a real file, stop the "Generate Test Logs" process group, configure TailFile to point to your log file of choice, and start the TailFile processor
 
 ## Flink - WindowLogLevelCount - Setup
-* Run the Flink streaming job
+* For local testing, run a standalone Flink streaming job
 <pre><code>
   cd nifi-flink-examples
   mvn clean package -PWindowLogLevelCount
   java -jar target/nifi-flink-examples-0.0.1-SNAPSHOT.jar
+</code></pre>
+
+## Apex - LogLevelApplicationRunner - Setup
+
+* For local testing, run LogLevelApplicationRunner from your favorite IDE:
+<pre><code>
+  nifi-apex-examples/src/test/java/nifi/apex/examples/logs/LogLevelApplicationRunner.java
 </code></pre>

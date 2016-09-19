@@ -11,11 +11,20 @@
 
     <artifactId>nifi-flink-examples</artifactId>
 
+    <properties>
+        <flink.version>1.1.2</flink.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-nifi</artifactId>
-            <version>0.10.2</version>
+            <artifactId>flink-connector-nifi_2.10</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_2.10</artifactId>
+            <version>${flink.version}</version>
         </dependency>
     </dependencies>
 
@@ -42,6 +51,16 @@
                                             </manifestEntries>
                                         </transformer>
                                     </transformers>
+                                    <filters>
+                                        <filter>
+                                            <artifact>*:*</artifact>
+                                            <excludes>
+                                                <exclude>META-INF/*.SF</exclude>
+                                                <exclude>META-INF/*.DSA</exclude>
+                                                <exclude>META-INF/*.RSA</exclude>
+                                            </excludes>
+                                        </filter>
+                                    </filters>
                                 </configuration>
                             </execution>
                         </executions>

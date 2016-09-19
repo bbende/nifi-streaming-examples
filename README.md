@@ -7,10 +7,10 @@ Collection of examples integrating NiFi with stream process frameworks.
 
 * Extract the tar and create two instances of NiFi:
   <pre><code>  
-    tar xzvf nifi-<version>-bin.tar.gz
-    mv nifi-<version> nifi-edge
-    tar xzvf nifi-<version>-bin.tar.gz
-    mv nifi-<version> nifi-core
+    tar xzvf nifi-1.0.0-bin.tar.gz
+    mv nifi-1.0.0 nifi-edge
+    tar xzvf nifi-1.0.0-bin.tar.gz
+    mv nifi-1.0.0 nifi-core
   </code></pre>
 * Configure the edge instance by editing nifi-edge/conf/nifi.properties and setting the following properties:
   <pre><code>  
@@ -52,10 +52,10 @@ Collection of examples integrating NiFi with stream process frameworks.
 * Import nifi-streaming-examples/templates/nifi-log-example-core.xml into the the core instance (http://localhost:8080/nifi)
 
 * Start everything on the core instance (http://localhost:8080/nifi)
-![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-core.png?raw=true)
+![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/screens/nifi-core.png?raw=true)
 
 * To start sending logs, starting everything on the edge instance (http://localhost:8080/nifi) EXCEPT the TailFile processor, the "Generate Test Logs" process group will send fake log messages
-![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/nifi-flink-examples/screens/nifi-flink-edge.png?raw=true)
+![Image](https://github.com/bbende/nifi-streaming-examples/blob/master/screens/nifi-edge.png?raw=true)
 
 * To tail a real file, stop the "Generate Test Logs" process group, configure TailFile to point to your log file of choice, and start the TailFile processor
 

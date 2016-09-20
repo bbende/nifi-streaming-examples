@@ -1,4 +1,4 @@
-# nifi-streaming-examples
+# Apache NiFi Streaming Examples
 Collection of examples integrating NiFi with stream process frameworks.
 
 ## Initial Setup

@@ -16,6 +16,7 @@
     <modules>
         <module>nifi-flink-examples</module>
         <module>nifi-apex-examples</module>
+	<module>nifi-storm-examples</module>
     </modules>
 
     <dependencyManagement>

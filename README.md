@@ -73,3 +73,12 @@ Collection of examples integrating NiFi with stream process frameworks.
 <pre><code>
   nifi-apex-examples/src/test/java/nifi/apex/examples/logs/LogLevelApplicationRunner.java
 </code></pre>
+
+## Storm - LogLevelCountTopology - Setup
+
+* For local testing, run a standalone local Storm topology
+<pre><code>
+  cd nifi-storm-examples
+  mvn clean package -PLogLevelCountTopology
+  java -jar target/nifi-storm-examples-0.0.1-SNAPSHOT.jar
+</code></pre>
